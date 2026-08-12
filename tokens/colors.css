@@ -1,0 +1,32 @@
+:root{
+  /* base palette — bright primary "candy playground" set */
+  --red-500:#EF3340; --red-600:#D31F2D; --red-700:#A9151F;
+  --yellow-300:#FFE1A0; --yellow-400:#FFC93C; --yellow-500:#F5B300;
+  --blue-400:#6BB4EE; --blue-500:#1E88E5; --blue-600:#146FBE;
+  --sky-300:#7FDBFA; --sky-400:#3FC6F4; --sky-500:#17AEE8; --sky-600:#0E8FC2;
+  --pink-500:#EC2C8D;
+  --green-400:#7FD3A8; --green-500:#3CB878; --green-600:#2E9962;
+  --ink-900:#1B1B2F; --ink-700:#3A3A4A; --ink-500:#64636F;
+  --cream-50:#FFF8EC; --cream-100:#FFF0D2;
+  --white:#FFFFFF; --gray-100:#F5F3EE; --gray-200:#E8E5DE;
+
+  /* semantic aliases — use these in components */
+  --color-bg:var(--white);
+  --color-bg-alt:var(--cream-50);
+  --color-bg-dark:var(--ink-900);
+  --color-text:var(--ink-900);
+  --color-text-muted:var(--ink-500);
+  --color-text-on-dark:var(--white);
+  --color-primary:var(--red-500);
+  --color-primary-hover:var(--red-600);
+  --color-accent:var(--yellow-400);
+  --color-accent-strong:var(--yellow-500);
+  --color-secondary:var(--blue-500);
+  --color-secondary-hover:var(--blue-600);
+  --color-success:var(--green-500);
+  --color-link:var(--blue-600);
+  --color-link-hover:var(--red-500);
+  --color-brand-sky:var(--sky-500);
+  --color-brand-sky-deep:var(--sky-600);
+  --color-border:var(--gray-200);
+}
