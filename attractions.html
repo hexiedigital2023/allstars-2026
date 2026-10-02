@@ -25,7 +25,7 @@ a:hover{color:var(--color-link-hover)}
 img{max-width:100%}
 .wrap{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6)}
 header.site{position:sticky;top:0;z-index:20;background:var(--color-brand-sky);border-bottom:3px solid var(--sky-300)}
-.navbar{display:flex;align-items:center;gap:16px;padding:14px 0}
+.navbar{display:flex;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{height:56px}
 nav.links{display:flex;gap:18px;flex-wrap:nowrap;flex:1;justify-content:center}
@@ -86,14 +86,26 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 .social-row a:hover{opacity:1;color:var(--color-accent)}
 .bottom{margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid rgba(255,255,255,.15);font-size:var(--text-xs);opacity:.7}
 @media (max-width:900px){footer.site .grid{grid-template-columns:1fr}}
+.menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:2px solid #fff;border-radius:12px;background:transparent;cursor:pointer;padding:0;flex-shrink:0}
+.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{display:block;width:20px;height:2px;background:#fff;border-radius:2px;position:relative;transition:transform .2s,background .2s}
+.menu-toggle span::before,.menu-toggle span::after{content:"";position:absolute;left:0}
+.menu-toggle span::before{top:-6px}.menu-toggle span::after{top:6px}
+header.site.open .menu-toggle span{background:transparent}
+header.site.open .menu-toggle span::before{transform:translateY(6px) rotate(45deg)}
+header.site.open .menu-toggle span::after{transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:1000px){.menu-toggle{display:inline-flex}.navbar{justify-content:space-between}
+header.site.open nav.links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--color-brand-sky);padding:8px 24px 20px;border-bottom:3px solid var(--sky-300);box-shadow:0 12px 24px rgba(0,0,0,.15);max-height:calc(100vh - 90px);overflow-y:auto}
+header.site.open nav.links a{padding:14px 0;font-size:var(--text-base);border-bottom:1px solid rgba(255,255,255,.25)}
+header.site.open nav.links a:last-child{border-bottom:none}}
+@media (max-width:480px){.navbar.wrap{padding-left:16px;padding-right:16px;gap:10px}.navcta{gap:10px}.navcta .btn{padding:9px 14px;font-size:var(--text-xs)}.brand img{height:46px}}
 </style>
 </head>
 <body>
 <header class="site">
 <div class="wrap navbar">
 <a class="brand" href="index.html"><img src="assets/logo/allstars-logo-real.png" alt="Allstars Indoor Playland logo"></a>
-<nav class="links"><a href="index.html">Home</a><a href="attractions.html" class="active">Attractions</a><a href="pricing-hours.html">Pricing</a><a href="birthday-parties.html">Parties</a><a href="cafe.html">Café</a><a href="groups-field-trips.html">Groups</a><a href="faq.html">FAQ</a><a href="waiver.html">Waiver</a><a href="location-contact.html">Contact</a></nav>
-<div class="navcta"><a class="phonelink" href="tel:+17807570055">(780) 757-0055</a><a class="btn btn-onblue sm" href="birthday-parties.html">Book a party</a></div>
+<nav class="links" id="site-nav"><a href="index.html">Home</a><a href="attractions.html" class="active">Attractions</a><a href="pricing-hours.html">Pricing</a><a href="birthday-parties.html">Parties</a><a href="cafe.html">Café</a><a href="groups-field-trips.html">Groups</a><a href="faq.html">FAQ</a><a href="waiver.html">Waiver</a><a href="location-contact.html">Contact</a></nav>
+<div class="navcta"><a class="phonelink" href="tel:+17807570055">(780) 757-0055</a><a class="btn btn-onblue sm" href="birthday-parties.html">Book a party</a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span></button></div>
 </div>
 </header>
 
@@ -198,4 +210,5 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 </div>
 <div class="wrap bottom">© Allstars Indoor Playland. All rights reserved. Prices, hours and package details are approximate — please confirm current details by phone before visiting.</div>
 </footer>
+<script>(function(){var h=document.querySelector('header.site'),b=h&&h.querySelector('.menu-toggle');if(!b)return;b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});h.querySelectorAll('nav.links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.setAttribute('aria-expanded','false');});});})();</script>
 </body></html>
