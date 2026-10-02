@@ -86,6 +86,17 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 @media (max-width:900px){footer.site .grid{grid-template-columns:1fr}.pkg-grid{grid-template-columns:1fr}}
 .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)}
 @media (max-width:1000px){.pkg-grid{grid-template-columns:1fr}}
+.faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-list details{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);border:1px solid var(--color-border)}
+.faq-list summary{cursor:pointer;list-style:none;padding:18px 56px 18px 22px;font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--color-brand-sky-deep);line-height:1}
+.faq-list details[open] summary::after{content:"–"}
+.faq-list details[open] summary{color:var(--color-brand-sky-deep)}
+.faq-list .ans{padding:0 22px 18px}
+.faq-list .ans p:last-child,.faq-list .ans ul:last-child{margin-bottom:0}
+.faq-list .ans ul{margin:0 0 var(--space-4);padding-left:20px}
+.faq-list .ans li{margin-bottom:6px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -109,7 +120,7 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 
 <section>
 <div class="wrap">
-<div class="pkg-grid">
+<div class="pkg-grid" id="packages" style="scroll-margin-top:110px">
 
 <div class="pkg-card" style="--pcolor:var(--red-500)">
 <p class="star">★ Star Party ★</p>
@@ -205,22 +216,80 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 </div>
 </section>
 
-<section class="alt">
+
+<section id="party-inquiries" style="scroll-margin-top:90px">
 <div class="wrap">
-<h2>Good to know before you book</h2>
-<div class="grid cols-2">
-<div class="card cream">
-<h3>Booking &amp; deposits</h3>
-<p>A 50% deposit is required upon booking to secure your reservation. If no deposit is placed within 24 hours of booking, the event will be cancelled. Guest count, date, time and food/drink selections are confirmed a minimum of 72 hours before your event.</p>
-<h3>Cancellations</h3>
-<p>With more than 14 days' notice, 50% of the deposit is retained and the remaining balance refunded. With less than 14 days' notice, no refund is offered. The remaining balance is due in full on the day of your event.</p>
+<div style="text-align:center;margin-bottom:var(--space-6)">
+<p class="eyebrow">Party inquiries</p>
+<h2>Party Inquiries</h2>
 </div>
-<div class="card cream">
-<h3>Decorations &amp; food safety</h3>
-<p>We encourage you to customize your child's party — let us know how we can help. For guest safety and site cleanliness, no confetti, confetti cannons, party poppers, glow sticks, piñatas, glitter, sparklers or latex balloons are allowed on site; please use foil balloons instead. If providing treat/loot bags, please distribute these at pickup time. No outside food or drinks are permitted, except a special cake or dessert with any party package. Allstars is a nut-free facility.</p>
-<h3>On the day</h3>
-<p>Everyone, including adults, must wear socks (available for purchase in guest services if forgotten). Parents/caregivers are responsible for supervising their children throughout the party. We enforce a no-bullying policy, and admission is charged for each visit — re-entry requires another entry fee.</p>
-</div>
+<div class="faq-list">
+<details><summary>What birthday packages do you have?</summary><div class="ans">
+<p>Please visit our <a href="#packages">Party Packages</a> page to view the different packages, and to book online.</p>
+</div></details>
+<details><summary>How can I book a birthday party?</summary><div class="ans">
+<p>Birthday parties can be booked online through our website, in person during office hours, by phone at <a href="tel:+17807570055">780-757-0055</a>, or by email at <a href="mailto:info@allstarsplayland.com">info@allstarsplayland.com</a>.</p><p>Please note that our office is closed on weekends, and we are unable to process in-person birthday party bookings on Saturdays or Sundays. We recommend contacting us during our regular office hours (Monday to Friday 9am-3pm) to ensure we can assist you with your booking.</p>
+</div></details>
+<details><summary>How far in advance do I need to book a birthday?</summary><div class="ans">
+<p>Our party rooms are first come, first served, and available time slots may vary depending on the day. To ensure the best selection of rooms and times, we strongly recommend booking your party at least 2 weeks in advance.</p><p>Please note that all birthday party bookings for the upcoming weekend are finalized by Wednesday. Once Wednesday has passed, we block off the remaining party slots and are unable to accept last minute birthday party bookings for that weekend.</p>
+</div></details>
+<details><summary>If I book a party, am I allowed to bring cake?</summary><div class="ans">
+<p>Yes! If you have booked one of our birthday party packages, you are welcome to bring a nut-free birthday cake.</p><p>Please note that cake is the only outside food permitted for booked birthday parties. Outside food, drinks, snacks, or other treats are not permitted inside the facility.</p>
+</div></details>
+<details><summary>What happens if I end up having under 10 kids for my party?</summary><div class="ans">
+<p>Our birthday party packages are priced as a 10-child minimum. If fewer than 10 children attend, the package price will remain the same and will not be reduced based on the number of children attending.</p>
+</div></details>
+<details><summary>What happens if I end up having more kids than I had booked for?</summary><div class="ans">
+<p>For the day of the birthday party, reception will keep a sign-in sheet to sign all of the kids attending. Should the original number change, your party host will adjust the numbers accordingly.</p>
+</div></details>
+<details><summary>Can I decorate my room?</summary><div class="ans">
+<p>Yes. Decorations are permitted. The only decorations we do not permit are glitter, confetti or confetti cannons, pinatas, party poppers, sparklers, glow sticks, confetti or sparkle filled balloons.</p><p>Painters tape must be used if hanging decorations on the wall.</p>
+</div></details>
+<details><summary>Can I bring goodie bags?</summary><div class="ans">
+<p>Yes. Goodie bags must be nut-free and handed out to children as they are leaving the facility.</p>
+</div></details>
+<details><summary>Can I bring a mascot/princess/face painter, etc?</summary><div class="ans">
+<p>Yes! You are welcome to bring a mascot, character, or other party entertainer. We recommend having them remain in your designated party room, unless you are comfortable with other children outside of your party approaching or interacting with them.</p>
+</div></details>
+<details><summary>Can I bring a speaker?</summary><div class="ans">
+<p>Yes, speakers are permitted during the 90-minute room time.</p>
+</div></details>
+<details><summary>How long do I have the party room for?</summary><div class="ans">
+<p>Rooms are only available for 90 minutes.</p>
+</div></details>
+<details><summary>How early can I come to decorate my room?</summary><div class="ans">
+<p>Decoration and room access times can vary depending on the day's schedule. Please confirm your decoration time with our staff when you receive your party confirmation.</p><p>We do our best to have rooms available at the scheduled time; however, party rooms may occasionally become available later than expected if the previous party runs over its scheduled time or requires additional time to clean and reset the room. We appreciate your understanding and ask that you allow for some flexibility when planning your arrival.</p>
+</div></details>
+<details><summary>How long do I have to get my deposit back from my party booking?</summary><div class="ans">
+<p>If you need to cancel your party and would like to receive a refund of your deposit, cancellation must be made within 14 days of the date the party was booked.</p><p>Please note that after the 14-day period has passed, deposits are non-refundable.</p>
+</div></details>
+<details><summary>I booked my party, but it is less than 14 days. Will I be able to get my deposit back?</summary><div class="ans">
+<p>No. Bookings made within 14 days of the party date are non-refundable. By booking a party within this 14-day period, you acknowledge and agree that the deposit is non-refundable and cannot be returned if the party is cancelled.</p>
+</div></details>
+<details><summary>My birthday cake has nuts, can I still bring it in?</summary><div class="ans">
+<p>No. We are a strict nut-free facility. Anything with nuts is not permitted inside.</p>
+</div></details>
+<details><summary>Can I have a birthday party there without officially booking?</summary><div class="ans">
+<p>Yes! You are welcome to celebrate a birthday with us under general admission. Please note that tables are first come, first served and cannot be reserved.</p><p>General admission must be paid for each child attending, and all required waiver forms must be completed.</p><p>We do offer pizzas and select platters for purchase; however, availability is not guaranteed and may vary on the day of your visit.</p><p>Please note that outside cake, desserts, or other special treats are not permitted inside the facility. There are no exceptions to this policy.</p>
+</div></details>
+<details><summary>What platters are available to order the day of?</summary><div class="ans">
+<p>Please note platters may not always be available to order the day of, and pricing is subject to change.</p><ul>
+<li>Popcorn Chicken Platter (with fries): $46.99 + GST</li>
+<li>Chicken Tender Platter (with fries): $46.99 + GST</li>
+<li>French Fry Platter: $36.00 + GST</li>
+<li>Snack Platter (Mozzerella sticks, popcorn chicken, chicken tenders, french fries): $54.99 + GST</li>
+<li>Kids Meal Platter (Hot dogs, grilled cheese, popcorn chicken, french fries) $54.99 + GST</li>
+</ul>
+</div></details>
+<details><summary>Can I still have my cake after the room time is done?</summary><div class="ans">
+<p>Once the room time is done, we kindly ask for your cake to be put away either to your vehicle or back in our fridge/freezer until you are departing.</p>
+</div></details>
+<details><summary>Can I get extra time in the room?</summary><div class="ans">
+<p>Room extensions are subject to availability. If an extension is available, an additional 30 minutes is $55.00 + GST. Please note that pricing is subject to change.</p>
+</div></details>
+<details><summary>Can I stay in the room if there is no party afterwards?</summary><div class="ans">
+<p>Unfortunately, guests cannot remain in the room after their scheduled time, even if there is no party immediately following. Once your scheduled room time has ended, we kindly ask that you begin moving your personal belongings to the tables upstairs or downstairs.</p><p>If you would like additional time in the room, please speak with your host about our 30-minute room extension option, subject to availability.</p>
+</div></details>
 </div>
 </div>
 </section>

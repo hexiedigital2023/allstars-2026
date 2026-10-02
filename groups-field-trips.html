@@ -77,6 +77,17 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 .social-row a:hover{opacity:1;color:var(--color-accent)}
 .bottom{margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid rgba(255,255,255,.15);font-size:var(--text-xs);opacity:.7}
 @media (max-width:900px){footer.site .grid{grid-template-columns:1fr}}
+.faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-list details{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);border:1px solid var(--color-border)}
+.faq-list summary{cursor:pointer;list-style:none;padding:18px 56px 18px 22px;font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--color-brand-sky-deep);line-height:1}
+.faq-list details[open] summary::after{content:"–"}
+.faq-list details[open] summary{color:var(--color-brand-sky-deep)}
+.faq-list .ans{padding:0 22px 18px}
+.faq-list .ans p:last-child,.faq-list .ans ul:last-child{margin-bottom:0}
+.faq-list .ans ul{margin:0 0 var(--space-4);padding-left:20px}
+.faq-list .ans li{margin-bottom:6px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -103,7 +114,76 @@ footer.site ul li::before{content:"•";position:absolute;left:0;color:var(--col
 </div>
 </section>
 
-<section class="alt">
+<section class="alt" id="group-inquiries" style="scroll-margin-top:90px">
+<div class="wrap">
+<div style="text-align:center;margin-bottom:var(--space-6)">
+<p class="eyebrow">Group inquiries</p>
+<h2>Group Inquiries</h2>
+</div>
+<div class="faq-list">
+<details><summary>What is considered a group?</summary><div class="ans">
+<p>A group is considered an organized organization or team, such as a sports team, dayhome/daycare, school, church, community organization, or other established group.</p>
+<p>Groups may be required to provide information such as a business licence number, organization/registration number, or other documentation to verify their group status.</p>
+<p>A group booking does not apply simply because multiple individuals are attending together. Informal groups of friends, families, or individuals who are not part of an established organization or team may be considered as general admission.</p>
+</div></details>
+<details><summary>Can my group come at the last minute?</summary><div class="ans">
+<p>Unfortunately, we do not accept last-minute group bookings. Group bookings must be arranged and confirmed in advance.</p>
+<p>If your group arrives without an official group booking, admission will be charged at the regular general admission rate.</p>
+</div></details>
+<details><summary>Can I order individual items for my group at the cafe?</summary><div class="ans">
+<p>No. For group bookings, we do not allow individual kitchen items for the children. We do offer the French Fry Platter, Chicken Tender Platter, Popcorn Chicken Platter, or pizzas. Please view our <a href="cafe.html">online menu</a> for pricing.</p>
+</div></details>
+<details><summary>Can we bring in our own lunch boxes?</summary><div class="ans">
+<p>No. As per our facility policy, we do not allow any outdoor food, drinks or snacks.</p>
+</div></details>
+<details><summary>Can we bring in water bottles?</summary><div class="ans">
+<p>Yes. Water bottles are permitted, and can be refilled at the cafe.</p>
+</div></details>
+<details><summary>Do you offer group lunch?</summary><div class="ans">
+<p>Yes! Our group lunch option is available for an additional $6.00 + GST per child and includes:</p>
+<ul>
+<li>Unlimited drinks during your stay</li>
+<li>A designated room for your group to enjoy lunch (the room is not available for the duration of your visit)</li>
+<li>One slice of cheese or pepperoni pizza per child</li>
+</ul>
+<p>For group lunch, we will take a $50-$100 non-refundable deposit. Please note pricing is subject to change.</p>
+</div></details>
+<details><summary>What are your group rates?</summary><div class="ans">
+<ul>
+<li>Monday-Thursday: $6.00 + GST/child</li>
+<li>Friday-Sunday: $10.00 +GST/child</li>
+</ul>
+<p>Please note pricing is subject to change.</p>
+</div></details>
+<details><summary>Do I need to pay the group rate for my volunteers/supervisors who are not 18?</summary><div class="ans">
+<p>Yes. Volunteers and supervisors who are under 18 years old are still considered minors and must be included in the group rate, even if they are attending in a volunteer or supervisory role.</p>
+</div></details>
+<details><summary>What if a child has a severe allergy/dietary restriction?</summary><div class="ans">
+<p>For any allergy/dietary restriction concerns, please contact us at <a href="tel:+17807570055">780-757-0055</a> or email us at <a href="mailto:info@allstarsplayland.com">info@allstarsplayland.com</a> to speak to the management team.</p>
+</div></details>
+<details><summary>How does payment work?</summary><div class="ans">
+<p>Upon arrival, we will first confirm that all required group waivers have been completed. We will then confirm the final number of children attending.</p>
+<p>Once the attendance has been confirmed, payment will be collected in full at reception before the gates are opened.</p>
+</div></details>
+<details><summary>If I order food, can I change it the day of?</summary><div class="ans">
+<p>Unfortunately, food orders cannot be changed on the day of your visit, as our kitchen team prepares the food in advance that morning.</p>
+<p>If you need to make a change to your food order, please notify us at least 48 hours in advance.</p>
+</div></details>
+<details><summary>Can members from my group stay later after our group leaves?</summary><div class="ans">
+<p>No. Once the group’s scheduled time has ended, any members who wish to stay longer will need to purchase admission at the regular general admission rate. We require everyone from the group to arrive and depart at the same time.</p>
+</div></details>
+<details><summary>Can members of my group arrive at different times?</summary><div class="ans">
+<p>No. We require members/children to arrive and depart at the same time.</p>
+</div></details>
+<details><summary>Can you keep track of the amount of kids coming from our group?</summary><div class="ans">
+<p>We can certainly try, however if booking with more than 30 children it can be difficult to ensure accurate numbers. It is the group organizer’s responsibility to ensure that the number of children attending matches the number included in the booking. We strongly recommend doing a head count before leaving your organization.</p>
+<p>If the number of children has changed, please let reception know before payment is processed so we can update the total accordingly.</p>
+</div></details>
+</div>
+</div>
+</section>
+
+<section>
 <div class="wrap">
 <div class="cta-photo">
 <img src="assets/images/party-cta-bg.jpg" alt="">
